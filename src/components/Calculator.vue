@@ -59,10 +59,7 @@
         if(digit !== '.'){
           const i = this.current;
           const newValue = parseFloat(displayValue);
-          // const values = [...this.values];
           this.values[i] = newValue;
-          
-          // this.values = values;
         }
       },
       setOperation(operation){
@@ -76,7 +73,6 @@
           const equals = operation === '=';
           const currentOperation = this.operation;
           
-          // const values = [...this.values];
           this.values[0] = this.execOperation(this.values, currentOperation);
           this.values[1] = 0;
 
@@ -84,7 +80,6 @@
           this.operation = equals ? null : operation;
           this.current = equals ? 0 : 1;
           this.clearDisplay = !equals;
-          // this.values = values;
         }
       },
       execOperation(values, operation){
